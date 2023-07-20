@@ -24,7 +24,13 @@ html {
 
 body{
     margin: 0;
+    background-color: var(--color5);
 }  
+
+header{
+    position: sticky;
+    top:0;
+}
 
 .menu{
     margin: 0;
@@ -33,10 +39,15 @@ body{
 
 .menu__container{
     margin: 0;
+    padding: 0;
     list-style: none;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
 }
 
 .menu__container__item{
+    font-size: 0.6rem;
     color: var(--color5);
     padding: 0.5rem;
 }
@@ -44,11 +55,13 @@ body{
 .menu__container__item a{
     text-decoration: none;
     color: inherit;
+    transition-property:font-size;
+    transition-duration: 0.6s;
 }
 
 .menu__container__item a:hover{
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 0.7rem;
 }
 
 .tittle{
@@ -69,6 +82,44 @@ body{
 .text{
     text-align: center;
     padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.container-cards{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+        "card1 card2"
+        "card3 card4"
+    ;
+    align-items: center;
+    justify-items: center;
+}
+
+.container-cards img{
+    margin:1rem 0 0 0;
+    box-shadow: -6px -6px 6px -3px var(--color1);
+}
+
+.container-cards h5{
+    margin:1rem 0;
+}
+
+.contariner-cards__card1{
+    grid-area: card1;
+}
+
+.contariner-cards__card2{
+    grid-area: card2;
+}
+
+.contariner-cards__card3{
+    grid-area: card3;
+}
+
+.contariner-cards__card4{
+    grid-area: card4;
 }
 
 .tittle-news{
@@ -76,9 +127,100 @@ body{
     text-decoration: underline;
 }
 
+#who-we-are, #why-choose-us, #educational-proposal, #latest-news{
+    text-align: center;
+}
+
+main img{
+    width: 70%;
+    height: auto;
+    border-radius: 2rem;
+    box-shadow: 0px 8px 27px 1px var(--color4);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#art{
+    width: 30%;
+}
+
+#excursion{
+    width: 50%;
+}
+
 .footer{
     margin: 0;
     background-color: var(--color4);
     color: var(--color5);
     display: flex;
+    justify-content: space-between;
+}
+
+.footer__socials, .footer__institute, .footer__contact{
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.footer__socials__container{
+    display: flex;
+    padding: 0;
+}
+
+.footer__socials__container__icon{
+    height: auto;
+    width: 2rem;
+    padding: 0.3rem;
+}
+
+.footer__contact__list{
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer__contact__list__item{
+    font-size: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Media */
+
+@media screen and (min-width: 768px) {
+    html{
+        font-size: 1.5rem;
+    }
+    
+    img{
+        width: 50%;
+    }
+
+    #art{
+        width: 30%;
+    }
+    
+    #excursion{
+        width: 40%;
+    }
+}
+
+@media  screen and (min-width: 1024px) {
+
+    #who-we-are, #why-choose-us{
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-areas: 
+            "tittle tittle"
+            "img text"
+        ;
+    }
+
+    #who-we-are img, #why-choose-us img{
+        width: 90%;
+        margin-left: 1rem;
+    }
+
+    .subtitle{
+        grid-area: tittle;
+    }
+
 }

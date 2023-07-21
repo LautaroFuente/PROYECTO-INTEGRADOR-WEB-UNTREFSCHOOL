@@ -1,0 +1,94 @@
+:root{
+    --color1: #FC7300;
+    --color2: #1F8A70;
+    --color3: #00425A;
+    --color4: #181823;
+    --color5: #EFF5F5;
+
+    --font-Belanosima: 'Belanosima', sans-serif;
+    --font-Poppins: 'Poppins', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: var(--font-Poppins);
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+
+body{
+    margin: 0;
+    background-color: var(--color5);
+    background: linear-gradient(0deg, var(--color3) 12%, var(--color2) 41%, var(--color2) 58%, var(--color3) 84%);
+}
+
+h1{
+    text-align: center;
+    color: var(--color5);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 80%;
+    height: 80vh;
+    border-radius: 6px;
+    border: solid 4px var(--color4);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: var(--color5);
+}
+
+input,
+textarea,
+label{
+    width: 80%;
+    height: 10%;
+    margin: 0.5rem;
+}
+
+label{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input,
+textarea {
+    border: 2px solid var(--color4);
+    border-radius: 4px;
+}
+
+textarea {
+    resize: none;
+  }
+
+.submit{
+    background-color: var(--color2);
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.submit:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+input:valid{
+    border-color: var(--color2);
+}
+
+input:invalid{
+    border-color: var(--color1);
+}

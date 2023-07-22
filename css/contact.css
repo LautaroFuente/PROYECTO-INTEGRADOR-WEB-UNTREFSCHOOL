@@ -61,6 +61,8 @@ label{
 label{
     text-align: center;
     font-size: 1.5rem;
+    color: var(--color3);
+    font-weight: bold;
 }
 
 input,
